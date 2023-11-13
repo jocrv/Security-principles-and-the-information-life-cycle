@@ -1,0 +1,151 @@
+In the previous module, we saw the example of data theft in transport. Even if they were encrypted, the action could occur in the same way, as it was a consequence of vulnerabilities in the physical security of the media in question. Thus, two aspects could be transgressed:
+
+Integrity
+It depends on whether or not the information is fully impacted, as the media could be destroyed.
+
+close
+Confidentiality
+It depends on whether or not the stored information has any protection controls, such as encryption.
+
+The ABNT ISO/IEC 27,000 family of standards divides physical security into two aspects: one is related to equipment and the other is related to the environment.
+
+Information security acts this way. It is understood as juxtaposed layers that allow information to become increasingly protected. It's as if our information received layers of protection similar to an onion.
+
+As for the environment, in a business installation, for example, it is possible to observe the physical security layers and, from there, establish a parallel with the image of the onion.
+
+
+Let's imagine the following situation: As we approach a facility, we reach the car gate, which is usually staffed by two security guards. Its function is to request identification or check whether the vehicle has an identification seal. Typically, this seal is unique to that institution. In some cases, this verification can be done automatically with some low-frequency signal emission technology, such as RFID.
+
+After overcoming this first barrier (the outermost layer of our security onion), there is usually one more stage: turnstile and elevator. It is linked to some biometric or badge control. RFID again appears as an example.
+
+These physical controls are juxtaposed, allowing the vulnerability of one of them to be covered by another control. This works in a similar way in server rooms, data centers and vaults, creating layers of security that make physical access to the server difficult.
+
+Another aspect that must be taken into consideration is protection against natural threats, such as floods, fires and other calamities caused by nature and/or man.
+
+With this in mind, certain monitoring and prevention controls must be installed and controlled.
+
+extension
+Example
+Security cameras, temperature controls, fire extinguishers and sprinklers (sometimes translated as automatic showers).
+
+Cabling and access to the external network (internet), as well as energy supply, are fundamental factors in this process. As they depend on third-party supply, certain contractual and redundancy aspects need to be established.
+
+Furthermore, normative policies and instructions must be instituted, trained and simulated for readiness. In this sense, it is reasonable to have redundancy in the network supply (internet), as well as physical independence of this supply in terms of the type of connection stipulated. Look:
+
+
+The world's largest computers are organized into a list known as the Top 500 (top500.org). Due to their cost and computational power, these devices require a series of protection features.
+
+The largest computational resource in Brazil, the Santos Dumont supercomputer is on this list. To provide the necessary security features, a series of measures were taken and then published on YouTube.
+Software-based measures
+In addition to physical security measures, there are logical security measures, which correspond to software-based measures. From this list, we can highlight passwords, access control lists, encryption, and the firewall.
+
+Repeating the pattern already presented, these mechanisms are juxtaposed, that is, interspersed with each other. In this way, the demand from one layer can create an additional one to another that has a particular vulnerability.
+
+
+As an example of this, there are biometric access controls on the equipment itself, such as fingerprint reading and facial recognition. These biometric control systems are characterized by capturing human geometry, which, to a large extent, differs for each person.
+Currently, fingerprint readers have given way to facial recognition due to the dissemination of sensors and the technology used. There are several APIs available for free and commercial use, such as the Amazon Rekognition API. These controls act to protect the confidentiality of information.
+
+Cryptography corresponds to the set of techniques that allow data to be scrambled through the use of keys and computational algorithms based on mathematical functions. These functions provide, in general terms, the presence of two large classes of algorithms: symmetric and asymmetric. Let's see!
+
+Symmetric encryption
+
+Logical security - symmetric encryption
+It uses simpler mathematical functions and a single key to encrypt and decrypt. This class of algorithms is made up of, among other examples, Caesar's Cipher, Blowfish, Twofish and Rijnadel. Thanks to this control, it is possible to ensure the confidentiality of information. See the set in the following table:
+
+Algorithm Key size
+AES (Rijnadel) 128, 192 and 256 bits
+Twofish 128, 192 and 256 bits
+Serpent 128, 192 and 256 bits
+Blowfish 32 to 448-bit
+RC4 40-128 bits
+3DES (based on DES) 168 bits
+IDEA 128 bits
+
+
+Asymmetric encryption
+
+Logical security - asymmetric encryption
+
+It is characterized by algorithms that typically involve more sophisticated mathematical techniques, such as the factorization of large numbers and the discrete logarithm. This family employs two keys: one is used for encryption; the other, to decipher. Such keys are known as:
+
+Public
+It is made available on a trusted server.
+
+close
+private
+It is in the user's possession.
+
+With the combination of these keys, it is possible to ensure not only confidentiality, but also non-repudiation or irreversibility. After all, the use of this control can be combined with both the sender's private key (non-repudiation) and the recipient's public key (confidentiality). Diffie-Hellman, El Gamal and Elliptic Curves are some of the algorithms in this family. Regarding the controls applied to networks, firewalls, intrusion detection systems and VPNs stand out.
+
+These controls allow the creation of security zones inside and outside the institution. Such zones make it possible to create segregation of functionalities. Of the security zones, the most commonly found is the DMZ. Demilitarized zone, it limits the region where web and application servers can be located. Watch:
+
+Deny by default
+All traffic is denied. Only servers and protocols are authorized.
+
+This is the policy normally found and recommended on the market. As all traffic is denied, only traffic whose rules (R1) are accepted can travel.
+
+
+Accept by default
+All traffic is authorized, although traffic destined for certain servers is denied.
+
+Any traffic is accepted by default. Specific rules (R1 and R2) define which ones will be denied.
+(2019 - IF-BA - administration assistant) Regarding the concepts involving information security, analyze the following statements.
+
+I. Security mechanisms can be logical or physical.
+II. The loss of confidentiality, integrity and availability is an example of events that compromise information security.
+III. Digital signature, encryption and firewall are examples of logical security mechanisms.
+
+Please tick:
+Security mechanisms or controls can be logical and physical. Information security is based on three fundamental aspects: confidentiality, integrity and availability. Therefore, the loss of any of the three aspects already impacts security. The worst situation occurs when we lose all three together: it is practically a catastrophe. Finally, logical mechanisms, by definition, involve algorithms.
+
+
+(2019 - Comperve - UFRN - information technology analyst) Computer security has its own terminology. Standardization in the use of this terminology guarantees correct understanding between the different agents involved. In relation to this, consider the following statements about computational security.
+
+I. Physical security aims to provide mechanisms to restrict access to critical areas of the organization in order to guarantee the integrity and authenticity of data.
+II. A threat can be defined as any event that may occur and cause danger to some network asset. Threats can be intentional or unintentional.
+III. The most common threats to computer networks are unauthorized access, reconnaissance (e.g. PortScan) and denial of service (e.g. DoS or DDoS).
+IV. The “security tripod” is made up of people, processes and security policies. There is no point in such a policy if people and processes are not considered.
+
+Regarding computer security, the following statements are correct:
+Security is based on layers; In the physical part, access controls to certain regions of the institution are defined, such as gates, turnstiles and biometric access systems. When they lose their purpose, the attacker can get physically close to the equipment, potentially damaging its physical part. Of the various problems that can be faced, we must highlight the possibility of breaking the equipment (putting the integrity of the information at risk) or modifying it in a harmful way (putting the authenticity of the information at risk). However, we cannot guarantee these factors. At this point, a problem is generated, as there are still other mechanisms that can provide, at least, the authenticity of the data.
+
+A threat is an event that can cause the loss of one of the three pillars of security: confidentiality, integrity and availability. Regarding common threats to networks, the examples are correct, however, according to the latest statistics, this could change at any time. Such threats are common as, to date, there is no complete solution for this.
+(2016 - CESPE /Cebraspe - TRT - 8th Region - judicial analyst - information technology) Correspond to items capable of offering control or protection within the scope of preventive physical security:
+Physical security is related to access to the facilities; logic, to the algorithms that protect the data.
+
+
+(2013 - FCC - TRT - 9th Region - judicial technician - security) Security perimeters (barriers, such as walls, card-controlled entrance gates or reception desks with receptionists) should be used to protect areas containing information and facilities of information processing. In addition, the following guidelines for physical security perimeters are taken into consideration and implemented, where appropriate:
+
+I. Security perimeters must be clearly defined, as well as the location and resistance capacity of each perimeter must depend on the security requirements of the assets within the perimeter and the results of the risk analysis/assessment.
+II. The perimeters of a building or a location containing information processing facilities must be physically sound (that is, the perimeter must not have gaps or points where an intrusion could easily occur).
+III. A reception area or other means must be implemented to control physical access to the site or building. This access must be restricted to authorized personnel only.
+IV. Physical barriers must be constructed to prevent unauthorized physical access and contamination of the environment.
+
+What is stated in:
+Physical installations must have juxtaposed security so that the weakness of one layer can be covered by another. This logic is clear in the functioning of guardhouses, gates and biometric sensors.
+
+When designing a network, it is common to adopt a firewall to protect an internal network. Regarding the role of the firewall, select the option that presents a correct way of classifying this ICT asset.
+The firewall is an important network asset; therefore, finding it in a network project becomes essential. It protects an internal network by analyzing and blocking, through algorithms proprietary to each brand, access to and transport of data within it. Because it manipulates them, this asset is classified as logical security.
+
+Since the pandemic that occurred in 2020, access systems have evolved to use facial recognition. Many of these systems have very creative slogans, like this: “A facial recognition access system allows you to take your company directly into the world of high technology through the use of this important security tool: _______________”.
+
+Select the alternative that presents the term that completes the previous slogan in the most satisfactory way.
+An access system, regardless of the type of key (password) created, allows physical blocking of a given location. This key (password), over time, has evolved a lot: cards with barcodes, magnetic stripes, digital stripes, hand veins and, now, facial recognition.
+(2019 - FCC - TRF - 4th Region - judicial analyst - information technology systems) Suppose that an analyst at the Federal Regional Court of the 4th Region is faced with a situation in which he must implement internal protection mechanisms aimed at the physical and logical security of information in the court environment. To do this, he raised the following requirements:
+
+I. Do not install equipment in areas with public access that allows access to the court's internal network.
+II. Users may not perform IT transactions that are incompatible with their role.
+III. Only authorized users should have access to use systems and applications.
+IV. You must secure the storage location of backup drives and restrict access to computers and printers that may contain sensitive data.
+
+The analyst correctly and respectively classified requirements I to IV as security:
+Physical security is related to access to facilities, while logic deals with algorithms.
+
+Question 2
+(2018 - Cesgranrio - Transpetro - junior systems analyst - business processes) To protect data networks, companies create security perimeters made up of components that evaluate ingress and egress traffic. The component that uses access control lists formed by rules that determine whether or not a packet can cross the barrier is:
+The firewall uses rules to create barriers and related policies.
+We list the basic concepts in the area of security and information, citing their value, their property and their life cycle, in addition to the concepts of physical security, logic and access control.
+
+We address the life cycle and related issues at each stage. Next, we present the main security mechanisms, such as encryption, in addition to these security pillars: confidentiality, integrity and availability.
+
+We talk about physical security, which relates to physical access to facilities; and logic, which is linked to algorithms. We also check important concepts, such as the firewall and the zones delimited by it.
